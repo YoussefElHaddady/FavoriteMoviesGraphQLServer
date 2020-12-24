@@ -36,13 +36,13 @@ public class MovieServiceImpl implements MovieService {
 	}
 
 	@Override
-	@GraphQLMutation(name = "save")
+	@GraphQLMutation(name = "saveMovie")
 	public Movie save(@GraphQLArgument(name = "movie") Movie movie) {
 		return movieRepository.save(movie);
 	}
 
 	@Override
-	@GraphQLMutation(name = "delete")
+	@GraphQLMutation(name = "deleteMovie")
 	public void delete(@GraphQLArgument(name = "id") long id) {
 		movieRepository.deleteById(id);
 	}
